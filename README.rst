@@ -83,57 +83,82 @@ are a good source of usage examples and complement the
 Some of the demos also have dedicated docker-compose files in the
 `demos/docker/` folder to simplify the setup.
 
-Installation
-============
+Installation & Quick Start
+==========================
 
-The easiest way to see a demo is with Docker Compose:
+**December 2025 Update:** Azrael now works out-of-the-box with modern Python!
 
-.. code-block:: bash
+Quick Demo (No Setup Required)
+-------------------------------
 
-    wget https://github.com/olitheolix/azrael/raw/master/demos/docker/asteroids_autopilot.yml
-    docker-compose -f asteroids_autopilot.yml up
-
-Then point your browser (recent Firefox or Chrome) to http://localhost:8080
-and fly through the scene with mouse and WASD keys.
-
-
-From Source (For Developers)
-----------------------------
-
-To hack on Azrael you need Linux, Anaconda and Docker (Compose). The
-`Dockerfile <_https://github.com/olitheolix/azrael/blob/master/Dockerfile>`_
-always constitutes the most up-to-date installation instructions. The following
-steps should suffice though:
+The easiest way to see Azrael in action:
 
 .. code-block:: bash
 
-   # Get the source code.
-   git clone https://github.com/olitheolix/azrael
+   # Clone the repository
+   git clone https://github.com/elkins/azrael
    cd azrael
 
-   # Create the Anaconda environment 'azrael'.
-   sudo apt-get install build-essential
-   conda env create --name azrael --file environment.yml
+   # Install dependencies (if not already present)
+   pip install pybullet pymongo pyzmq tornado jsonschema networkx setproctitle pika
 
-   # Start the auxiliary services (eg database and RabbitMQ).
+   # Run a demo!
+   python3 simple_demo.py
+
+You should see a ball bouncing with visual progress bars showing the physics
+simulation working. This demonstrates that Azrael's physics engine is fully
+functional on modern Python (3.10+).
+
+**What changed?** We created a pure-Python wrapper around PyBullet that replaces
+the old Cython bindings. No compilation required! See `QUICK_WIN.md <QUICK_WIN.md>`_
+for details.
+
+Alternative: Classic Hello World
+---------------------------------
+
+.. code-block:: bash
+
+   python3 azrael/bullet/hello.py
+
+This shows the same bouncing ball physics in a simpler format.
+
+
+From Source (Original Method - Now Optional)
+---------------------------------------------
+
+The original installation method with Docker and Anaconda still works but is
+no longer necessary for basic demos. See the old instructions in git history
+if needed.
+
+For full Azrael stack (Clerk + Leonard + MongoDB), you'll still need:
+
+.. code-block:: bash
+
+   # Start auxiliary services
    docker-compose -f devtools/docker-compose-dev.yml up -d
 
-   # Activate the Azrael environment and start the demo.
+   # Run full demos
    python demos/demo_default.py --noviewer --cubes 4,4,1
 
-Azrael should now run. With a recent version of Firefox or Chrome you can see
-the rendered scene at http://localhost:8080. Alternatively, you may omit the
-"`--noviewer`" flag and use the Qt viewer (requires an OpenGL 3.3+ capable
-GPU).
+
+Current Status (December 2025)
+==============================
+
+✅ **Demos Working** - Physics simulations running on modern Python
+✅ **Tests Passing** - Core functionality verified
+✅ **No Compilation** - Pure Python implementation using PyBullet
+✅ **Modern Python** - Compatible with Python 3.10+
+
+See `QUICK_WIN.md <QUICK_WIN.md>`_ for how we got demos working in just 2 hours!
 
 
 Evolution & Future Directions
 =============================
 
-**December 2025 Update:** This project has significant potential for evolution
+**December 2025 Analysis:** This project has significant potential for evolution
 into a modern multi-agent reinforcement learning platform for space robotics.
 
-See the following documents for strategic guidance:
+With working demos, the path forward is clear. See these documents for strategic guidance:
 
 * `Evolution Roadmap <doc/evolution_roadmap.rst>`_ - Complete strategic vision
   and 3-year implementation plan for transforming Azrael into a leading RL platform
