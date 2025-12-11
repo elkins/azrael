@@ -127,6 +127,37 @@ the rendered scene at http://localhost:8080. Alternatively, you may omit the
 GPU).
 
 
+Evolution & Future Directions
+=============================
+
+**December 2025 Update:** This project has significant potential for evolution
+into a modern multi-agent reinforcement learning platform for space robotics.
+
+See the following documents for strategic guidance:
+
+* `Evolution Roadmap <doc/evolution_roadmap.rst>`_ - Complete strategic vision
+  and 3-year implementation plan for transforming Azrael into a leading RL platform
+
+* `Quick Start Evolution <QUICK_START_EVOLUTION.md>`_ - Practical next steps,
+  validation strategies, and immediate actions
+
+* `Decision Matrix <EVOLUTION_DECISION_MATRIX.md>`_ - Framework for deciding
+  which direction to take
+
+* `Architecture Notes <doc/ARCHITECTURE_NOTES.md>`_ - Technical deep dive and
+  modernization opportunities
+
+**Key Opportunities:**
+
+* Multi-agent RL platform for autonomous spacecraft
+* Distributed swarm robotics testbed
+* Collaborative digital twins for satellite operations
+* Browser-based space physics education platform
+
+The distributed, network-first architecture makes Azrael uniquely positioned
+for these applications. No mature open-source competitors exist in this space.
+
+
 Contribute to Azrael
 ====================
 
