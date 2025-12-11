@@ -12,6 +12,9 @@ networkx>=3.0.0
 # Physics engine (replaces custom Cython bindings)
 pybullet>=3.2.0
 
+# Development/debugging (used in code)
+ipython>=8.0.0
+
 # Process management
 setproctitle>=1.3.0
 
