@@ -56,4 +56,4 @@ jobs:
 
     - name: Run visual demo
       run: |
-        python simple_demo.py
+        python demos/simple_demo.py
