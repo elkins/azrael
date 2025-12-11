@@ -118,9 +118,10 @@ azrael/
 └── aztypes.py           # Core data types
 
 demos/
-├── simple_demo.py           # Text-based demo
-├── visual_azrael_demo.py    # 3D GUI demo
-└── pybullet_only_demo.py    # Pure PyBullet (comparison)
+├── simple_demo.py               # Text-based demo
+├── visual_azrael_demo.py        # 3D GUI demo
+├── pybullet_only_demo.py        # Pure PyBullet (comparison)
+└── demo_*.py                    # Legacy demos (need updating)
 ```
 
 ## Troubleshooting

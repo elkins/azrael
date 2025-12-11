@@ -1,20 +1,59 @@
-**/*~
-**/*.cache
-**/__pycache__/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Azrael specific
+azrael.log
+
+# Bullet build artifacts (legacy)
 /azrael/bullet/.sconsign.dblite
 /azrael/bullet/azBullet.cpp
-/azrael/bullet/azBullet.cpython-34m.so
+/azrael/bullet/azBullet.cpython-*.so
 /azrael/bullet/bin/
 /azrael/bullet/build/
-/azrael/bullet/bullet-2.82-r2704.tgz
+/azrael/bullet/bullet-*.tgz
 /azrael/bullet/bullet.os
 /azrael/bullet/bulletlib/
 /azrael/bullet/cython_bullet.cpp
-/azrael/bullet/cython_bullet.cpython-34m.so
+/azrael/bullet/cython_bullet.cpython-*.so
 /azrael/bullet/cython_bullet.os
-/doc/_build/
-/doc/json_schemas/
-/doc/images/orig
-/doc/source/tmp/
-azrael.log
 
+# Sphinx docs build
+/docs/sphinx/_build/
+/docs/sphinx/json_schemas/
+/docs/sphinx/images/orig
+/docs/sphinx/source/tmp/
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.cache
