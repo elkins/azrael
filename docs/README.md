@@ -29,8 +29,21 @@
 2. Check [EVOLUTION.md](EVOLUTION.md) for RL platform vision
 3. See [HISTORY.md](HISTORY.md) for project context
 
-## Archive
+## Additional Resources
 
+### Sphinx Documentation
+The [sphinx/](sphinx/) directory contains the original Sphinx/RST documentation:
+- API documentation
+- Detailed tutorials
+- Legacy documentation
+
+To build HTML docs:
+```bash
+cd docs/sphinx
+make html
+```
+
+### Archive
 Historical documents are in [archive/](archive/) including:
 - Original analysis and decision documents
 - Modernization guide and quick wins summary
